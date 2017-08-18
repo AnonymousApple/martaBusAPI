@@ -14,6 +14,7 @@
 <% end %>
 
 <% @nearby_buses.each_with_index do |bus, index| %>
+<div class="bus-map" id="map-canvas"></div>
 <script>
 var userCoords = new google.maps.LatLng(<%= @location.latitude %>,         <%= @location.longitude %>);
 var mapOptions = {
@@ -93,10 +94,6 @@ $(document).ready(function (){
 <!-- End maps -->
 
 <% end %>
-<div class="bus-map" id="map-canvas"></div>
-<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIwApHuvmhJw4bp8YkXMJEd8ntJVl8ek4">
- </script>
 <%= link_to "Actually, I'm at...", edit_location_path(@location) %>
 
 <%= link_to 'Back', locations_path %>
