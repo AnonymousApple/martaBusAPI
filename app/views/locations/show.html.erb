@@ -5,11 +5,11 @@
 
 <h2>The Closest Buses Are...</h2>
 
-<% if @bus_count == 0 %>
+<% if !@bus_count > 0 %>
   <p>
     ...not really that close. Just order an Uber. Or Lyft.
     Or call a friend. Or just give up and go back inside to
-    watch TV. Going places is overrated.
+    watch TV. Going anywhere is overrated.
     </p>
 <% end %>
 
