@@ -29,7 +29,7 @@ $(document).on('turbolinks:load', function() {
     animation: google.maps.Animation.DROP,
     icon: {url: "<%= asset_path 'X.png' %>", scaledSize: {height: 37, width: 37} }
   });
-  var infoWindowUser = google.maps.InfoWindow({
+  var infoWindowUser = new  google.maps.InfoWindow({
     content: 'You are here'
   });
   google.maps.event.addListener(userMarker, 'click', function() {
