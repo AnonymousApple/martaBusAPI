@@ -65,6 +65,15 @@ $(document).on('turbolinks:load', function (){
   var image = {url: "<%= asset_path 'X.jpeg'%>",
   scaledSize: new google.maps.Size(30, 30)};
 
+  // Info window and event listener for the bus
+  var infoWindowBus = new google.maps.InfoWindow({
+    content: contentStringBus
+  });
+
+  google.maps.event.addListener(busMarker, 'click', function() {
+    infoWindowBus.open(map, busMarker);
+  });
+
 });
 
 </script>
