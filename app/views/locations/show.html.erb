@@ -7,16 +7,16 @@
 
 <% if @bus_count == 0 %>
   <p>
-    ...not really that close. Just order an Uber. Or Lyft.
-    Or call a friend. Or just give up and go back inside to
-    watch TV. Going anywhere is overrated.
+    ...not really very close. Simply order an Uber. Or Lyft.<br>
+    Perhaps call a friend. Or just plain give up and go back inside and<br>
+    watch TV. Going anywhere these days is overrated.
     </p>
 <% end %>
 
 <% @nearby_buses.each_with_index do |bus, index| %>
 <div class="bus-map" id="map-canvas"></div>
 <script>
-var userCoords = new google.maps.LatLng(<%= @location.latitude %>,         <%= @location.longitude %>);
+var userCoords = new google.maps.LatLng(<%= @location.latitude %>, <%= @location.longitude %>);
 var mapOptions = {
   center: userCoords,
   zoom: 13,
@@ -57,7 +57,7 @@ $(document).ready(function (){
       });
 
       // This is the marker for our users position
-      var image = {url: "<%= asset_path 'X.png'%>",
+      var image = {url: "<%= asset_path 'X.jpeg'%>",
                    scaledSize: new google.maps.Size(30, 30)};
       var userMarker = new google.maps.Marker({
         position: userCoords,
